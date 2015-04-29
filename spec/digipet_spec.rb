@@ -6,7 +6,7 @@ describe(DigiPet) do
   describe("#initialize") do
     it("creates new pet and sets life levels") do
       my_pet = DigiPet.new("lil dragon")
-      expect(my_pet.name()).to(eq("Your DigiPet's name is lil dragon!"))
+      expect(my_pet.name()).to(eq("lil dragon"))
       expect(my_pet.food_lvl()).to(eq("lil dragon's food level is at 10"))
       expect(my_pet.sleep_lvl()).to(eq("lil dragon's sleep level is at 10"))
       expect(my_pet.active_lvl()).to(eq("lil dragon's activity level is at 10"))
