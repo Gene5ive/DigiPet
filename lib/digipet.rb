@@ -5,14 +5,10 @@ class DigiPet
     @@food_lvl = 10
     @@sleep_lvl = 10
     @@active_lvl = 10
-    @last_update = Time.now.to_i
+    @@last_update = Time.now.to_i
   end
 
   define_method(:name) do
-    @@name
-  end
-
-  define_singleton_method(:name) do
     @@name
   end
 
@@ -63,9 +59,8 @@ class DigiPet
 
   define_singleton_method(:update) do
     this_update = Time.now.to_i
-    @amount = (this_update - @last_update) / 30
+    @amount = (this_update - @@last_update) / 30
     @amount >= 1 ? self.time_passes : nil
     @last_update = Time.now.to_i
-    "#{@amount} half minutes have passed since last update."
   end
 end

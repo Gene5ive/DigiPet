@@ -15,7 +15,7 @@ post('/actions') do
   case
   when pet_action == 'feed'
     DigiPet.feed
-  when pet_action == 'go_sleep'
+  when pet_action == 'sleep'
     DigiPet.go_sleep
   when pet_action == 'play'
     DigiPet.play
